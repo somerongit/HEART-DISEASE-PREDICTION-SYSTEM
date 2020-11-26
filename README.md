@@ -7,6 +7,7 @@ It's a complete website which predicts if heart disease can occur or not based o
     
 --> Install VS code
     click to download --> https://code.visualstudio.com/docs/?dv=win
+
 --> Install set-up
     open 'cmd' on colne folder
     installtion comment 'pip install -r requirement.txt'
