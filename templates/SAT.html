@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>Self-determination</title>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/default2.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+
+	<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+	<style>
+		/* Popup container - can be anything you want */
+		.popup {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		/* The actual popup */
+		.popup .popuptext {
+			visibility: hidden;
+			width: 360px;
+			background-color: rgb(251, 249, 249);
+			color: rgba(12, 6, 6, 0.918);
+			text-align: center;
+			border-radius: 40px;
+			padding: 18px 0;
+			position: absolute;
+			z-index: 1;
+			bottom: 125%;
+			left: 50%;
+			margin-left: -80px;
+		}
+
+		/* Popup arrow */
+		.popup .popuptext::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: #FFFF00 transparent transparent transparent;
+		}
+
+		/* Toggle this class - hide and show the popup */
+		.popup .show {
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+		}
+
+		/* Add animation (fade in the popup) */
+		@-webkit-keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+	</style>
+
+
+</head>
+
+<body style=" background-color: #FFFF00">
+	<!--
+
+	<audio loop autoplay>
+		<source src="{{ url_for('static', filename='audio.mp3') }}" type="audio/mp3">
+	</audio>
+
+-->
+	<div id="wrapper">
+		<div id="header-wrapper">
+			<div id="header" class="container">
+				<div id="logo">
+					<h1><a href="{{url_for('main_page')}}" style="padding-left:10px">Self-determination</a></h1>
+					<p style="color: white; padding-left:10px;">Heart Disease Prediction System</p>
+				</div>
+				<div id="menu">
+					<ul>
+						<li><a href="{{url_for('main_page')}}" accesskey="1" title="">Homepage</a></li>
+						<li class="current_page_item"><a href="{{url_for('test_page')}}" accesskey="2"
+								title="">Tests</a></li>
+						<li><a href="{{url_for('about_page')}}" accesskey="4" title="">About Us</a></li>
+						<li><a href="{{url_for('helpline_page')}}" accesskey="5" title="">Help-line</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div style="height: 27em; width: 100%; background-image: url(/static/img/heartgif.gif)">
+		</div>
+	</div>
+	<div class="bg-image"></div>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	{% for message in messages %}
+	<h5>{{message}}</h5>
+	{% endfor %}
+	{% endif %}
+	{% endwith %}
+	<div align="center">
+		<br><br>
+		<h1><strong><u>Please fill up the form!!!</u></strong></h1>
+		<div style="float: right;"><img src="{{url_for('static',filename='/img/heart1.png')}}" alt="Heart"></div>
+		<form id="assessment-form" method="post" style="font-size: 1.5em;">
+			<table>
+				<tr>
+					<td><br><br><br>
+						<b>Enter Your Age:</b>
+					</td>
+
+					<td>
+						<input name="age" type="text" id="age" placeholder="Eg:19"
+							style="font-size: 1.1em;margin-top:18%" required>
+						<button class="popup" onclick="myFunction()">i
+							<span class="popuptext" id="myPopup" style="font-size: 1.5em;">Age is critical Factor!</span></button><br><br><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b for="sex">Gender:</b>
+					</td>
+					<td>
+						<select id="sex" name="sex" style="font-size: 1.1em;" required>
+							<option value="1"> Male</option><br>
+							<option value="0"> Female</option><br></select>
+							<button class="popup" onclick="myFunction()">i
+								<span class="popuptext" id="myPopup" style="font-size: 1.5em;">Gender is critical Factor!</span></button><br><br>
+					</td>
+				</tr>
+				<tr>
+					<td><br><br>
+						<b for="cp">Chest Pain Type:</b>
+					</td>
+
+					<td><br><br>
+						<select id="cp" name="cp" style="font-size: 1.1em;" required>
+							<option value="0"> Typical Angina<br>
+							<option value="1"> Atypical Angina<br>
+							<option value="2"> Non-Anginal Pain <br>
+							<option value="3"> Asymptomatic<br><br><br>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b>
+							<p for="trestbps">Resting Blood Pressure<br>
+								(in mm Hg on admission to the hospital):</p>
+						</b>
+					</td>
+
+					<td>
+						<br><br>
+						<input type="number" name="trestbps" id="trestbps" style="font-size: 1.1em;"
+							required><br><br><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b for="chol">Serum Cholestoral (in mg/dl):</b>
+					</td>
+
+					<td>
+						<br><br>
+						<input type="number" name="chol" id="chol" style="font-size: 1.1em;" required><br><br><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b for="fbs">Is Fasting Blood Sugar More than 120 mg/dl?</b>
+					</td>
+
+					<td>
+						<select name="fbs" id="fbs" style="font-size: 1.1em;">
+							<option value="1"> Yes</option><br>
+							<option value="0"> No</option><br><br><br>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<br><br>
+						<b for="restecg">Resting Electrocardiographic Results:</b>
+
+					<td>
+						<br><br>
+						<select name="restecg" id="restecg" style="font-size: 1.1em;" required>
+							<option value="0"> Normal<br>
+							<option value="1"> Having ST-T Wave Abnormality</option><br>
+							<option value="2"> Showing Probable or Definite Left Ventricular Hypertrophy by Estes'
+								Criteria</option><br><br><br>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b for="thalach">Maximum Heart Rate Achieved:</b>
+					</td>
+
+					<td>
+						<br><br>
+						<input type="number" id="thalach" name="thalach" style="font-size: 1.1em;" required><br><br><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b for="exang">Exercise Induced Angina:</b>
+					</td>
+
+					<td>
+						<select name="exang" id="exang" style="font-size: 1.1em;" required>
+							<option value="1"> Yes</option><br>
+							<option value="0"> No</option><br><br><br>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b for="oldpeak">ST Depression Induced by Exercise Relative to Rest:</b>
+					</td>
+
+					<td>
+						<br><br>
+						<input name="oldpeak" id="oldpeak" type="text" style="font-size: 1.1em;" required><br><br><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b for="slope">The slope of the peak exercise ST segment:</b>
+					</td>
+
+					<td>
+						<select name="slope" id="slope" style="font-size: 1.1em;" required>
+							<option value="0"> Upsloping</option><br>
+							<option value="1"> Flat</option><br>
+							<option value="2"> Downsloping </option><br><br><br>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b for="ca">Number of Major Vessels (0-3) Colored by Flourosopy:</b>
+					</td>
+
+					<td>
+						<br><br>
+						<input type="number" name="ca" id="ca" placeholder="Eg:0,1,2 or 3" style="font-size: 1.1em;"
+							required><br><br><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<b for="thal">Thalassemia level:</b>
+
+					<td>
+						<select name="thal" id="thal" style="font-size: 1.1em;">
+							<option value="1"> Normal</option><br>
+							<option value="2"> Fixed Defect</option> <br>
+							<option value="3"> Reversable Defect</option><br><br><br>
+						</select>
+					</td>
+				</tr>
+
+			</table>
+			<br><br><br>
+			<button type="submit" style="font-size: 2em; background-color: #0000FF; color: #FFFFFF">Submit</button>
+		</form>
+
+
+	</div>
+	</div>
+
+	<div id="page" class="container">
+
+	</div>
+	</div>
+	<div class="container" align="center">
+		<p style="margin-bottom: 20px">&copy; All rights reserved by Self-Determination@2005 | Devoloped by Sayantan Das
+			| 2019 </p>
+	</div>
+	<script>
+		// When the user clicks on div, open the popup
+		function myFunction() {
+			var popup = document.getElementById("myPopup");
+			popup.classList.toggle("show");
+		}
+	</script>
+</body>
+
+</html>
