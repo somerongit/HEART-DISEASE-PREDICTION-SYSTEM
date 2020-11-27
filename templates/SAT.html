@@ -80,6 +80,71 @@
 				opacity: 1;
 			}
 		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		input[type=text],
+		select,
+		textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			resize: vertical;
+		}
+
+		label {
+			padding: 12px 12px 12px 0;
+			display: inline-block;
+		}
+
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			float: right;
+		}
+
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+
+		
+
+		.col-25 {
+			float: left;
+			width: 25%;
+			margin-top: 6px;
+		}
+
+		.col-75 {
+			float: left;
+			width: 75%;
+			margin-top: 6px;
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) {
+
+			.col-25,
+			.col-75,
+			input[type=submit] {
+				width: 100%;
+				margin-top: 0;
+			}
+		}
 	</style>
 
 
@@ -87,11 +152,11 @@
 
 <body style=" background-color: #FFFF00">
 
-	<!--
+	
 	<audio loop autoplay>
 		<source src="{{ url_for('static', filename='audio.mp3') }}" type="audio/mp3">
 	</audio>
--->
+
 
 	<div id="wrapper">
 		<div id="header-wrapper">
@@ -125,202 +190,234 @@
 	{% endwith %}
 	<div align="center">
 		<br><br>
-		<h1><strong><u>Please fill up the form!!!</u></strong></h1>
-		<form id="assessment-form" method="post" style="font-size: 1.5em;">
-			<table>
-				<tr>
-					<td><br><br><br>
-						<b>Enter Your Age:</b>
-					</td>
+		<h1><strong><u>Please Enter The Details</u></strong></h1><br>
+<div class="container" style="padding-left: 2%;">
+		<form id="assessment-form" method="post" style="font-size: 1.5em">
+			<div class="row">
+				<div class="col-25">
+					<label>Enter Your Age:</label></div>
+		
+		
+		
+				<div class="col-75">
+					<input name="age" type="text" id="age" placeholder="Eg:19" style="margin-left: 2%;width:50%;font-size: 1.1em;"
+						required>
+					&nbsp<button class="popup" onclick="myFunction()">i
+						<span class="popuptext" id="myPopup" style="font-size: 1.5em;">Age is critical
+							Factor!</span></button>
+				</div>
+			</div>
+		
+		
+			<div class="row">
+				<br>
+				<div class="col-25">
+					<label for="sex">Gender:</label></div>
+		
+				<div class="col-75">
+					<select id="sex" name="sex" style="margin-left: 2%;width:50%;font-size: 1.1em" required>
+						<option value="1"> Male</option><br>
+						<option value="0"> Female</option><br>
+					</select>
+					&nbsp<button class="popup" onclick="myFunction1()">i
+						<span class="popuptext" id="myPopup1" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+		
+			<div class="row">
+				<br>
+				<div class="col-25">
+					<label for="cp">Chest Pain Type:</label></div>
+		
+				<div class="col-75">
+					<select id="cp" name="cp" style="margin-left: 2%;width:50%;font-size: 1.1em" required>
+						<option value="0"> Typical Angina<br>
+						<option value="1"> Atypical Angina<br>
+						<option value="2"> Non-Anginal Pain <br>
+						<option value="3"> Asymptomatic<br><br><br>
+					</select>
+					&nbsp<button class="popup" onclick="myFunction2()">i
+						<span class="popuptext" id="myPopup2" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+		
+		
+			<div class="row">
+				<div class="col-25">
+					<label for="trestbps">Resting Blood Pressure
+						(in mm Hg on admission to the hospital):
+					</label></div>
+		<br>
+				<div class="col-75">
+					<input type="number" name="trestbps" id="trestbps" style="margin-left: 2%;width:50%;font-size: 2em;"
+						required>&nbsp<button class="popup" onclick="myFunction3()">i
+						<span class="popuptext" id="myPopup3" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+		
+		
+			<div class="row">
+				<div class="col-25">
+					<label for="chol">Serum Cholestoral (in mg/dl):</label></div>
+		
+		
+		
+				<div class="col-75">
+					<input type="number" name="chol" id="chol" style="margin-left: 2%;width:50%;font-size: 2em;" required>&nbsp<button
+						class="popup" onclick="myFunction4()">i
+						<span class="popuptext" id="myPopup4" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+		
+		
+			<div class="row">
+				<div class="col-25">
+					<label for="fbs">Is Fasting Blood Sugar More than 120 mg/dl?</label></div>
+		
+		
+				<div class="col-75">
+					<select name="fbs" id="fbs" style="margin-left: 2%;width:50%;font-size: 1.1em;">
+						<option value="1"> Yes</option>
+						<option value="0"> No</option>
+					</select>&nbsp<button class="popup" onclick="myFunction5()">i
+						<span class="popuptext" id="myPopup5" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+			<div class="row">
+				<div class="col-25">
+					<label for="restecg">Resting Electrocardiographic Results:</label></div>
+		
+		
+				<div class="col-75">
+					<select name="restecg" id="restecg" style="margin-left: 2%;width:50%;font-size: 1.1em;" required>
+						<option value="0"> Normal<br>
+						<option value="1"> Having ST-T Wave Abnormality</option><br>
+						<option value="2"> Showing Probable or Definite Left Ventricular Hypertrophy by Estes'
+							Criteria</option>
+					</select>&nbsp<button class="popup" onclick="myFunction6()">i
+						<span class="popuptext" id="myPopup6" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+		
+		
+			<div class="row">
+				<div class="col-25">
+					<label for="thalach">Maximum Heart Rate Achieved:</label></div>
+		
+		
+		
+				<div class="col-75">
+					<input type="number" id="thalach" name="thalach" style="margin-left: 2%;width:50%;font-size: 2em;"
+						required>&nbsp<button class="popup" onclick="myFunction7()">i
+						<span class="popuptext" id="myPopup7" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+		
+		
+			<div class="row">
+				<div class="col-25">
+					<label for="exang">Exercise Induced Angina:</label></div>
+		
+		
+				<div class="col-75">
+					<select name="exang" id="exang" style="margin-left: 2%;width:50%;font-size: 1.1em;" required>
+						<option value="1"> Yes</option>
+						<option value="0"> No</option>
+					</select>&nbsp<button class="popup" onclick="myFunction8()">i
+						<span class="popuptext" id="myPopup8" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+		
+		
+			<div class="row">
+				<div class="col-25">
+					<label for="oldpeak">ST Depression Induced by Exercise Relative to Rest:</label></div>
+		
+		
+		<br>
+				<div class="col-75">
+					<input name="oldpeak" id="oldpeak" type="text" style="margin-left: 2%;width:50%;font-size: 1.1em;"
+						required>&nbsp<button class="popup" onclick="myFunction9()">i
+						<span class="popuptext" id="myPopup9" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+		
+		
+			<div class="row">
+				<div class="col-25">
+					<label for="slope">The slope of the peak exercise ST segment:</label></div>
+		
+		
+				<div class="col-75">
+					<select name="slope" id="slope" style="margin-left: 2%;width:50%;font-size: 1.1em;" required>
+						<option value="0"> Upsloping</option>
+						<option value="1"> Flat</option>
+						<option value="2"> Downsloping </option>
+					</select>&nbsp<button class="popup" onclick="myFunction10()">i
+						<span class="popuptext" id="myPopup10" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+		
+		
+			<div class="row">
+				<div class="col-25">
+					<label for="ca">Number of Major Vessels (0-3) Colored by Flourosopy:</label></div>
+		
+		
+		<br>
+				<div class="col-75">
+					<input type="number" name="ca" id="ca" 
+						style="margin-left: 2%;width:50%;font-size: 2em;" required>&nbsp<button class="popup"
+						onclick="myFunction11()">i
+						<span class="popuptext" id="myPopup11" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+		
+		
+			<div class="row">
+				<div class="col-25">
+					<label for="thal">Thalassemia level:</label></div>
+		
+				<div class="col-75">
+					<select name="thal" id="thal" style="margin-left: 2%;width:50%;font-size: 1.1em;">
+						<option value="1"> Normal</option>
+						<option value="2"> Fixed Defect</option>
+						<option value="3"> Reversable Defect</option>
+					</select>&nbsp<button class="popup" onclick="myFunction12()">i
+						<span class="popuptext" id="myPopup12" style="font-size: 1.5em;">Gender is critical
+							Factor!</span></button></div>
+			</div>
+		
+		
+		
+		<br><br>
+			<button type="submit" style="margin-left: -10%;font-size: 2em; background-color: #0000FF; color: #FFFFFF" >Submit</button>
 
-					<td>
-						<input name="age" type="text" id="age" placeholder="Eg:19"
-							style="width:50%;font-size: 1.1em;margin-top:18%" required>
-						&nbsp<button class="popup" onclick="myFunction()">i
-							<span class="popuptext" id="myPopup" style="font-size: 1.5em;">Age is critical
-								Factor!</span></button><br><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<b for="sex">Gender:</b>
-					</td>
-					<td>
-						<select id="sex" name="sex" style="width:50%;font-size: 1.1em;" required>
-							<option value="1"> Male</option><br>
-							<option value="0"> Female</option><br>
-						</select>
-						&nbsp<button class="popup" onclick="myFunction1()">i
-							<span class="popuptext" id="myPopup1" style="font-size: 1.5em;">Gender is critical
-								Factor!</span></button><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td><br><br>
-						<b for="cp">Chest Pain Type:</b>
-					</td>
-
-					<td><br><br>
-						<select id="cp" name="cp" style="width:50%;font-size: 1.1em;" required>
-							<option value="0"> Typical Angina<br>
-							<option value="1"> Atypical Angina<br>
-							<option value="2"> Non-Anginal Pain <br>
-							<option value="3"> Asymptomatic<br><br><br>
-						</select>
-						&nbsp<button class="popup" onclick="myFunction2()">i
-							<span class="popuptext" id="myPopup2" style="font-size: 1.5em;">Gender is critical
-								Factor!</span></button><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<b>
-							<p for="trestbps">Resting Blood Pressure<br>
-								(in mm Hg on admission to the hospital):</p>
-						</b>
-					</td>
-
-					<td>
-						<br><br>
-						<input type="number" name="trestbps" id="trestbps" style="width:50%;font-size: 1.1em;"
-							required>&nbsp<button class="popup" onclick="myFunction3()">i
-								<span class="popuptext" id="myPopup3" style="font-size: 1.5em;">Gender is critical
-									Factor!</span></button><br><br><br><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<b for="chol">Serum Cholestoral (in mg/dl):</b>
-					</td>
-
-					<td>
-						<br><br>
-						<input type="number" name="chol" id="chol" style="width:50%;font-size: 1.1em;"
-							required>&nbsp<button class="popup" onclick="myFunction4()">i
-								<span class="popuptext" id="myPopup4" style="font-size: 1.5em;">Gender is critical
-									Factor!</span></button><br><br><br><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<b for="fbs">Is Fasting Blood Sugar More than 120 mg/dl?</b>
-					</td>
-
-					<td>
-						<select name="fbs" id="fbs" style="width:50%;font-size: 1.1em;">
-							<option value="1"> Yes</option><br>
-							<option value="0"> No</option><br><br><br>
-						</select>&nbsp<button class="popup" onclick="myFunction5()">i
-							<span class="popuptext" id="myPopup5" style="font-size: 1.5em;">Gender is critical
-								Factor!</span></button><br><br>
-					</td>
-				</tr>
-
-				<tr>
-					<td>
-						<br><br>
-						<b for="restecg">Resting Electrocardiographic Results:</b>
-
-					<td>
-						<br><br>
-						<select name="restecg" id="restecg" style="width:50%;font-size: 1.1em;" required>
-							<option value="0"> Normal<br>
-							<option value="1"> Having ST-T Wave Abnormality</option><br>
-							<option value="2"> Showing Probable or Definite Left Ventricular Hypertrophy by Estes'
-								Criteria</option><br><br><br>
-						</select>&nbsp<button class="popup" onclick="myFunction6()">i
-							<span class="popuptext" id="myPopup6" style="font-size: 1.5em;">Gender is critical
-								Factor!</span></button><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<b for="thalach">Maximum Heart Rate Achieved:</b>
-					</td>
-
-					<td>
-						<br><br>
-						<input type="number" id="thalach" name="thalach" style="width:50%;font-size: 1.1em;"
-							required>&nbsp<button class="popup" onclick="myFunction7()">i
-								<span class="popuptext" id="myPopup7" style="font-size: 1.5em;">Gender is critical
-									Factor!</span></button><br><br><br><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<b for="exang">Exercise Induced Angina:</b>
-					</td>
-
-					<td>
-						<select name="exang" id="exang" style="width:50%;font-size: 1.1em;" required>
-							<option value="1"> Yes</option><br>
-							<option value="0"> No</option><br><br><br>
-						</select>&nbsp<button class="popup" onclick="myFunction8()">i
-							<span class="popuptext" id="myPopup8" style="font-size: 1.5em;">Gender is critical
-								Factor!</span></button><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<b for="oldpeak">ST Depression Induced by Exercise Relative to Rest:</b>
-					</td>
-
-					<td>
-						<br><br>
-						<input name="oldpeak" id="oldpeak" type="text" style="width:50%;font-size: 1.1em;"
-							required>&nbsp<button class="popup" onclick="myFunction9()">i
-								<span class="popuptext" id="myPopup9" style="font-size: 1.5em;">Gender is critical
-									Factor!</span></button><br><br><br><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<b for="slope">The slope of the peak exercise ST segment:</b>
-					</td>
-
-					<td>
-						<select name="slope" id="slope" style="width:50%;font-size: 1.1em;" required>
-							<option value="0"> Upsloping</option><br>
-							<option value="1"> Flat</option><br>
-							<option value="2"> Downsloping </option><br><br><br>
-						</select>&nbsp<button class="popup" onclick="myFunction10()">i
-							<span class="popuptext" id="myPopup10" style="font-size: 1.5em;">Gender is critical
-								Factor!</span></button><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<b for="ca">Number of Major Vessels (0-3) Colored by Flourosopy:</b>
-					</td>
-
-					<td>
-						<br><br>
-						<input type="number" name="ca" id="ca" placeholder="Eg:0,1,2 or 3"
-							style="width:50%;font-size: 1.1em;" required>&nbsp<button class="popup" onclick="myFunction11()">i
-								<span class="popuptext" id="myPopup11" style="font-size: 1.5em;">Gender is critical
-									Factor!</span></button><br><br><br><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<b for="thal">Thalassemia level:</b>
-
-					<td>
-						<select name="thal" id="thal" style="width:50%;font-size: 1.1em;">
-							<option value="1"> Normal</option><br>
-							<option value="2"> Fixed Defect</option> <br>
-							<option value="3"> Reversable Defect</option><br><br><br>
-						</select>&nbsp<button class="popup" onclick="myFunction12()">i
-							<span class="popuptext" id="myPopup12" style="font-size: 1.5em;">Gender is critical
-								Factor!</span></button><br><br>
-					</td>
-				</tr>
-
-			</table>
-			<br><br><br>
-			<button type="submit" style="font-size: 2em; background-color: #0000FF; color: #FFFFFF">Submit</button>
+		
 		</form>
-
+	</div>
 
 	</div>
 	</div>
@@ -350,7 +447,7 @@
 		function myFunction3() {
 			var popup = document.getElementById("myPopup3");
 			popup.classList.toggle("show");
-		}function myFunction4() {
+		} function myFunction4() {
 			var popup = document.getElementById("myPopup4");
 			popup.classList.toggle("show");
 		}
