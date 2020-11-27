@@ -1,125 +1,128 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<title>Self-Determination</title>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+<title>Heart Disease Prediction System</title>
 
-<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+
+	<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
 
 </head>
-<body style="width: 100%">
 
-	
-<div id="wrapper">
-	<div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<h1 style="padding-left: 5px"><a href="{{url_for('main_page')}}">Self-Determination</a></h1>
-			<p style="color: white; padding-left: 3%;padding-top:3%;">Heart Disease Prediction System</p>
-		</div>/
-		<div id="menu" style="padding-top: 15px">
-			<ul>
-				<li class="current_page_item"><a href="{{url_for('main_page')}}" accesskey="1" title="">Homepage</a></li>
-				<li><a href="{{url_for('test_page')}}" accesskey="2" title="">Tests</a></li>
-				<li><a href="{{url_for('about_page')}}" accesskey="4" title="">About Us</a></li>
-				<li><a href="{{url_for('helpline_page')}}" accesskey="5" title="">Help-line</a></li>
-			</ul>
+<body style="width: 100%;background-color: #FF4500">
+	<!--
+	<audio loop autoplay>
+		<source src="{{ url_for('static', filename='audio.mp3') }}" type="audio/mp3">
+	</audio> -->
+	<div id="wrapper">
+		<div id="header-wrapper">
+			<div id="header" class="container">
+				<div id="logo">
+					<h1 style="padding-left: 5px ;padding-top:2%"><a href="{{url_for('main_page')}}">Heart Disease Prediction System</a></h1>
+				</div>
+
+				<div  id="menu" style="font-size: 1.4em;">
+					<ul>
+						
+						<li class="current_page_item"><a href="{{url_for('test_page')}}" accesskey="2" title="">Tests</a></li>
+						<li><a href="{{url_for('about_page')}}" accesskey="4" title="">About Us</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="banner">
+			<div class="container">
+				<div class="title">
+					<span class="byline"></span> </div>
+				<ul class="actions">
+					<li><a href="{{url_for('test_page')}}" class="button">START PROCESS</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
-	</div>
-	<div id="banner">
-		<div class="container">
-			<div class="title">
-				<span class="byline"></span> </div>
-			<ul class="actions">
-				<li><a href="{{url_for('test_page')}}" class="button">START PROCESS</a></li>
-			</ul>
+	<!--recommendation intro-->
+	<div style="background-color: #FFFF00">
+		<div id="page" class="container" style="background-color: #FF4500">
+			<div class="container">
+				<h2 align="center" style="color: #ffffff; font-size: 3em;padding-left: 2em;">HOSPITAL NEAR
+					YOU</h1>
+					<h3 align="center" style="padding-top:1em;color:#FFFFFF">If there is any emergency & you need the
+						help of expert opinion, we recommend you to see this.
+				</h2>
+				<div>
+					<br><br>
+					<ul class="actions">
+						<li><a href="https://www.google.com/search?q=heart+hospital+recommendation+to+location&oq=heart+hospital+recommendation+to+location"
+								class="button" style="margin-bottom: 3%;">Heart Speciality Near
+								You </a></li>
+
+				</div>
+
+			</div>
+			<div>
+				<div class="title">
+					<h2 style="color: #FFFFFF">About Heart Disease</h2>
+					<h3 align="center" style="margin-top:3%;color: #FFFFFF">Heart disease is the leading cause of death
+						in the United States, causing about 1 in 4 deaths.1 The term “heart disease” refers to several
+						types of heart conditions. In the United States, the most common type of heart disease is
+						coronary artery disease (CAD), which can lead to heart attack. You can greatly reduce your risk
+						for heart disease through lifestyle changes and, in some cases, medicine.</h3>
+				</div>
+				<div>
+					<ul class="actions">
+						<li><a href="https://www.cdc.gov/heartdisease/about.htm" class="button"
+								style="margin-bottom: 3%;">Know more </a></li>
+				</div>
+			</div>
+
+			<div>
+				<div class="title">
+					<h2 style="color: #FFFFFF">Know Your Risk for Heart Disease</h2>
+					<h3 align="center" style="margin-top:3%;color: #FFFFFF">Several health conditions, your lifestyle,
+						and your age and family history can increase your risk for heart disease. These are called risk
+						factors. About half of all Americans (47%) have at least 1 of 3 key risk factors for heart
+						disease: high blood pressure, high cholesterol, and smoking.1
+
+						Some risk factors for heart disease cannot be controlled, such as your age or family history.
+						But you can take steps to lower your risk by changing the factors you can control.</h3>
+				</div>
+				<div>
+					<ul class="actions">
+						<li><a href="https://www.cdc.gov/heartdisease/risk_factors.htm" class="button"
+								style="margin-bottom: 3%;">Know more </a></li>
+				</div>
+			</div>
+
+			<div>
+				<div class="title">
+					<h2 style="color: #FFFFFF">Heart Disease Resources for Health Professionals</h2>
+					<h3 align="center" style="margin-top:3%;color: #FFFFFF">Health professionals can access a variety of
+						tools, resources, and training materials to develop and support programs that focus on
+						preventing heart disease.For more information click below.</h3>
+				</div>
+				<div>
+					<ul class="actions">
+						<li><a href="https://www.cdc.gov/heartdisease/prevention.htm" class="button"
+								style="margin-bottom: 3%;">Know more </a></li>
+				</div>
+			</div>
+
 		</div>
 	</div>
+	<div class="container" align="center" style="color: #FFFFFF">
+		<p style="margin-top: 10%">&copy; All rights reserved by Group-66@2020 | Devoloped by Group 66 under
+			Arunabha Tarafdar | 2020 </p>
 	</div>
-	<!--recommendation intro-->
-	<div style="background-color: #FFFF00">	
-	<div id="page" class="container" style="background-color: #FF4500">
-		<div class="title">
-			<h2 style="color: #FFFFFF">We recommend you to see also</h2>
-			<h3 align = "center" style="margin-top:3%;color: #FFFFFF">Here we are refering to go to this webpage in case you found some issues. There are various issues discussed like symptoms, remedies, precautions etc. As we would also recommend you to go and take advices from a specialist, medications and tests if needed.</h3> 
-			 </div>
-		
 	
-	<!--recommendation intro-->
-	<div>
-	<ul class="actions">
-				<li><a href="https://www.heart.org/en/health-topics/congenital-heart-defects/care-and-treatment-for-congenital-heart-defects/heart-health-recommendations-for-those-with-chd" class="button" style="margin-bottom: 3%;">Heart Health Recomendations </a></li>
-			
-	</div>	
-	
-	<!----------------TEAM SECTION----------------------->
-
-	
-		<div id="extra" class="team">
-		<div class="title" style="float : center; padding-top : 6%; padding-left: 3%">
-			<h2 style="color: #FFFFFF;">Developed by</h2>
-			<span class="byline"></span> </div>
-		<div id="three-column">
-
-			<div class="gallery" style="margin-right: 5%">
-				<a target="_blank" href="{{url_for('static',filename='/img/SAYANTAN.jpg')}}">
-					<img src="{{url_for('static',filename='/img/SAYANTAN.jpg')}}" alt="Forest" width="600" height="400">
-				</a>
-				<div align="center"><b>Amar Sarkar</div>
-			  </div>
-			  <div class="gallery" style="margin-right: 5%">
-				<a target="_blank" href="{{url_for('static',filename='/img/Subhrajyoti_Saha.jpeg')}}">
-					<img src="{{url_for('static',filename='/img/Subhrajyoti_Saha.jpeg')}}" alt="Forest" width="600" height="400">
-				</a>
-				<div align="center"><b>Subhrajyoti Saha</div>
-			  </div>
-			  <div class="gallery" style="margin-right: 5%">
-				<a target="_blank" href="{{url_for('static',filename='/img/Koyel.jpg')}}">
-					<img src="{{url_for('static',filename='/img/Koyel.jpg')}}" alt="Forest" width="600" height="400">
-				</a>
-				<div align="center"><b>Koyel Das</div>
-			  </div>
-			  <div class="gallery" style="margin-right: 5%">
-				<a target="_blank" href="{{url_for('static',filename='/img/Saptorshe_das.jpeg')}}">
-					<img src="{{url_for('static',filename='/img/Saptorshe_das.jpeg')}}" alt="Forest" width="600" height="400">
-				</a>
-				<div align="center">Saptorshe Das<b></div>
-			  </div>
-			  <div class="gallery" style="margin-right: 5%">
-				<a target="_blank" href="{{url_for('static',filename='/img/SOMERON_BAKULI.jpeg')}}">
-					<img src="{{url_for('static',filename='/img/SOMERON_BAKULI.jpeg')}}" alt="Forest" width="600" height="400">
-				</a>
-				<div align="center"><b>Someron Bakuli</div>
-			  </div>
-			  <div class="gallery" style="margin-right: 3%">
-				<a target="_blank" href="{{url_for('static',filename='/img/SAYANTAN.jpg')}}">
-					<img src="{{url_for('static',filename='/img/SAYANTAN.jpg')}}" alt="Forest" width="600" height="400">
-				</a>
-				<div align="center"><b>Sayantan Das</div>
-			  </div>
-	</div>	
-	</div>
-	<!--TEAM SECTION END -->
- 
-	<div id="page" class="container" style="background-color: #87CEEB">
-		<div class="title">
-			
-			<span class="byline"></span> </div>
-		
-			
-		</ul>
-	</div>
-</div>
-<div class="container" align="center">
-	<p style="margin-bottom: 20px">&copy; All rights reserved by Self-Determination@2005 | Devoloped by Sayantan Das | 2019 </p>
-</div>
 </body>
+
 </html>

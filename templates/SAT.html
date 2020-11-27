@@ -86,27 +86,28 @@
 </head>
 
 <body style=" background-color: #FFFF00">
-	<!--
 
+	<!--
 	<audio loop autoplay>
 		<source src="{{ url_for('static', filename='audio.mp3') }}" type="audio/mp3">
 	</audio>
-
 -->
+
 	<div id="wrapper">
 		<div id="header-wrapper">
 			<div id="header" class="container">
 				<div id="logo">
-					<h1><a href="{{url_for('main_page')}}" style="padding-left:10px">Self-determination</a></h1>
-					<p style="color: white; padding-left:10px;">Heart Disease Prediction System</p>
+					<h1 style="padding-left: 5px ;padding-top:2%"><a href="{{url_for('main_page')}}">Heart Disease
+							Prediction System</a></h1>
 				</div>
-				<div id="menu">
+
+				<div id="menu" style="font-size: 1.4em;">
 					<ul>
-						<li><a href="{{url_for('main_page')}}" accesskey="1" title="">Homepage</a></li>
+
 						<li class="current_page_item"><a href="{{url_for('test_page')}}" accesskey="2"
 								title="">Tests</a></li>
 						<li><a href="{{url_for('about_page')}}" accesskey="4" title="">About Us</a></li>
-						<li><a href="{{url_for('helpline_page')}}" accesskey="5" title="">Help-line</a></li>
+
 					</ul>
 				</div>
 			</div>
@@ -125,7 +126,6 @@
 	<div align="center">
 		<br><br>
 		<h1><strong><u>Please fill up the form!!!</u></strong></h1>
-		<div style="float: right;"><img src="{{url_for('static',filename='/img/heart1.png')}}" alt="Heart"></div>
 		<form id="assessment-form" method="post" style="font-size: 1.5em;">
 			<table>
 				<tr>
@@ -135,9 +135,10 @@
 
 					<td>
 						<input name="age" type="text" id="age" placeholder="Eg:19"
-							style="font-size: 1.1em;margin-top:18%" required>
-						<button class="popup" onclick="myFunction()">i
-							<span class="popuptext" id="myPopup" style="font-size: 1.5em;">Age is critical Factor!</span></button><br><br><br>
+							style="width:50%;font-size: 1.1em;margin-top:18%" required>
+						&nbsp<button class="popup" onclick="myFunction()">i
+							<span class="popuptext" id="myPopup" style="font-size: 1.5em;">Age is critical
+								Factor!</span></button><br><br><br>
 					</td>
 				</tr>
 				<tr>
@@ -145,11 +146,13 @@
 						<b for="sex">Gender:</b>
 					</td>
 					<td>
-						<select id="sex" name="sex" style="font-size: 1.1em;" required>
+						<select id="sex" name="sex" style="width:50%;font-size: 1.1em;" required>
 							<option value="1"> Male</option><br>
-							<option value="0"> Female</option><br></select>
-							<button class="popup" onclick="myFunction()">i
-								<span class="popuptext" id="myPopup" style="font-size: 1.5em;">Gender is critical Factor!</span></button><br><br>
+							<option value="0"> Female</option><br>
+						</select>
+						&nbsp<button class="popup" onclick="myFunction1()">i
+							<span class="popuptext" id="myPopup1" style="font-size: 1.5em;">Gender is critical
+								Factor!</span></button><br><br>
 					</td>
 				</tr>
 				<tr>
@@ -158,12 +161,15 @@
 					</td>
 
 					<td><br><br>
-						<select id="cp" name="cp" style="font-size: 1.1em;" required>
+						<select id="cp" name="cp" style="width:50%;font-size: 1.1em;" required>
 							<option value="0"> Typical Angina<br>
 							<option value="1"> Atypical Angina<br>
 							<option value="2"> Non-Anginal Pain <br>
 							<option value="3"> Asymptomatic<br><br><br>
 						</select>
+						&nbsp<button class="popup" onclick="myFunction2()">i
+							<span class="popuptext" id="myPopup2" style="font-size: 1.5em;">Gender is critical
+								Factor!</span></button><br><br>
 					</td>
 				</tr>
 				<tr>
@@ -176,8 +182,10 @@
 
 					<td>
 						<br><br>
-						<input type="number" name="trestbps" id="trestbps" style="font-size: 1.1em;"
-							required><br><br><br>
+						<input type="number" name="trestbps" id="trestbps" style="width:50%;font-size: 1.1em;"
+							required>&nbsp<button class="popup" onclick="myFunction3()">i
+								<span class="popuptext" id="myPopup3" style="font-size: 1.5em;">Gender is critical
+									Factor!</span></button><br><br><br><br><br>
 					</td>
 				</tr>
 				<tr>
@@ -187,7 +195,10 @@
 
 					<td>
 						<br><br>
-						<input type="number" name="chol" id="chol" style="font-size: 1.1em;" required><br><br><br>
+						<input type="number" name="chol" id="chol" style="width:50%;font-size: 1.1em;"
+							required>&nbsp<button class="popup" onclick="myFunction4()">i
+								<span class="popuptext" id="myPopup4" style="font-size: 1.5em;">Gender is critical
+									Factor!</span></button><br><br><br><br><br>
 					</td>
 				</tr>
 				<tr>
@@ -196,10 +207,12 @@
 					</td>
 
 					<td>
-						<select name="fbs" id="fbs" style="font-size: 1.1em;">
+						<select name="fbs" id="fbs" style="width:50%;font-size: 1.1em;">
 							<option value="1"> Yes</option><br>
 							<option value="0"> No</option><br><br><br>
-						</select>
+						</select>&nbsp<button class="popup" onclick="myFunction5()">i
+							<span class="popuptext" id="myPopup5" style="font-size: 1.5em;">Gender is critical
+								Factor!</span></button><br><br>
 					</td>
 				</tr>
 
@@ -210,12 +223,14 @@
 
 					<td>
 						<br><br>
-						<select name="restecg" id="restecg" style="font-size: 1.1em;" required>
+						<select name="restecg" id="restecg" style="width:50%;font-size: 1.1em;" required>
 							<option value="0"> Normal<br>
 							<option value="1"> Having ST-T Wave Abnormality</option><br>
 							<option value="2"> Showing Probable or Definite Left Ventricular Hypertrophy by Estes'
 								Criteria</option><br><br><br>
-						</select>
+						</select>&nbsp<button class="popup" onclick="myFunction6()">i
+							<span class="popuptext" id="myPopup6" style="font-size: 1.5em;">Gender is critical
+								Factor!</span></button><br><br>
 					</td>
 				</tr>
 				<tr>
@@ -225,7 +240,10 @@
 
 					<td>
 						<br><br>
-						<input type="number" id="thalach" name="thalach" style="font-size: 1.1em;" required><br><br><br>
+						<input type="number" id="thalach" name="thalach" style="width:50%;font-size: 1.1em;"
+							required>&nbsp<button class="popup" onclick="myFunction7()">i
+								<span class="popuptext" id="myPopup7" style="font-size: 1.5em;">Gender is critical
+									Factor!</span></button><br><br><br><br><br>
 					</td>
 				</tr>
 				<tr>
@@ -234,10 +252,12 @@
 					</td>
 
 					<td>
-						<select name="exang" id="exang" style="font-size: 1.1em;" required>
+						<select name="exang" id="exang" style="width:50%;font-size: 1.1em;" required>
 							<option value="1"> Yes</option><br>
 							<option value="0"> No</option><br><br><br>
-						</select>
+						</select>&nbsp<button class="popup" onclick="myFunction8()">i
+							<span class="popuptext" id="myPopup8" style="font-size: 1.5em;">Gender is critical
+								Factor!</span></button><br><br>
 					</td>
 				</tr>
 				<tr>
@@ -247,7 +267,10 @@
 
 					<td>
 						<br><br>
-						<input name="oldpeak" id="oldpeak" type="text" style="font-size: 1.1em;" required><br><br><br>
+						<input name="oldpeak" id="oldpeak" type="text" style="width:50%;font-size: 1.1em;"
+							required>&nbsp<button class="popup" onclick="myFunction9()">i
+								<span class="popuptext" id="myPopup9" style="font-size: 1.5em;">Gender is critical
+									Factor!</span></button><br><br><br><br><br>
 					</td>
 				</tr>
 				<tr>
@@ -256,11 +279,13 @@
 					</td>
 
 					<td>
-						<select name="slope" id="slope" style="font-size: 1.1em;" required>
+						<select name="slope" id="slope" style="width:50%;font-size: 1.1em;" required>
 							<option value="0"> Upsloping</option><br>
 							<option value="1"> Flat</option><br>
 							<option value="2"> Downsloping </option><br><br><br>
-						</select>
+						</select>&nbsp<button class="popup" onclick="myFunction10()">i
+							<span class="popuptext" id="myPopup10" style="font-size: 1.5em;">Gender is critical
+								Factor!</span></button><br><br>
 					</td>
 				</tr>
 				<tr>
@@ -270,8 +295,10 @@
 
 					<td>
 						<br><br>
-						<input type="number" name="ca" id="ca" placeholder="Eg:0,1,2 or 3" style="font-size: 1.1em;"
-							required><br><br><br>
+						<input type="number" name="ca" id="ca" placeholder="Eg:0,1,2 or 3"
+							style="width:50%;font-size: 1.1em;" required>&nbsp<button class="popup" onclick="myFunction11()">i
+								<span class="popuptext" id="myPopup11" style="font-size: 1.5em;">Gender is critical
+									Factor!</span></button><br><br><br><br><br>
 					</td>
 				</tr>
 				<tr>
@@ -279,11 +306,13 @@
 						<b for="thal">Thalassemia level:</b>
 
 					<td>
-						<select name="thal" id="thal" style="font-size: 1.1em;">
+						<select name="thal" id="thal" style="width:50%;font-size: 1.1em;">
 							<option value="1"> Normal</option><br>
 							<option value="2"> Fixed Defect</option> <br>
 							<option value="3"> Reversable Defect</option><br><br><br>
-						</select>
+						</select>&nbsp<button class="popup" onclick="myFunction12()">i
+							<span class="popuptext" id="myPopup12" style="font-size: 1.5em;">Gender is critical
+								Factor!</span></button><br><br>
 					</td>
 				</tr>
 
@@ -310,6 +339,54 @@
 			var popup = document.getElementById("myPopup");
 			popup.classList.toggle("show");
 		}
+		function myFunction1() {
+			var popup = document.getElementById("myPopup1");
+			popup.classList.toggle("show");
+		}
+		function myFunction2() {
+			var popup = document.getElementById("myPopup2");
+			popup.classList.toggle("show");
+		}
+		function myFunction3() {
+			var popup = document.getElementById("myPopup3");
+			popup.classList.toggle("show");
+		}function myFunction4() {
+			var popup = document.getElementById("myPopup4");
+			popup.classList.toggle("show");
+		}
+		function myFunction5() {
+			var popup = document.getElementById("myPopup5");
+			popup.classList.toggle("show");
+		}
+		function myFunction6() {
+			var popup = document.getElementById("myPopup6");
+			popup.classList.toggle("show");
+		}
+		function myFunction7() {
+			var popup = document.getElementById("myPopup7");
+			popup.classList.toggle("show");
+		}
+		function myFunction8() {
+			var popup = document.getElementById("myPopup8");
+			popup.classList.toggle("show");
+		}
+		function myFunction9() {
+			var popup = document.getElementById("myPopup9");
+			popup.classList.toggle("show");
+		}
+		function myFunction10() {
+			var popup = document.getElementById("myPopup10");
+			popup.classList.toggle("show");
+		}
+		function myFunction11() {
+			var popup = document.getElementById("myPopup11");
+			popup.classList.toggle("show");
+		}
+		function myFunction12() {
+			var popup = document.getElementById("myPopup12");
+			popup.classList.toggle("show");
+		}
+
 	</script>
 </body>
 

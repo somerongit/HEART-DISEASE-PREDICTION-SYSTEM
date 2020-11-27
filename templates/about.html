@@ -1,64 +1,168 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <title>Self-determination</title>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
-<link rel="stylesheet" href="{{ url_for('static', filename='css/default2.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
 
-<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/default2.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
 
 </head>
+
 <body style=" background-color: #FF8500">
+	
 	<audio loop autoplay>
 		<source src="{{ url_for('static', filename='audio.mp3') }}" type="audio/mp3">
 	</audio>
-<div id="wrapper">
-	<div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<h1><a href="{{url_for('main_page')}}" style="padding-left:10px">Self-determination</a></h1>
-			<p style="color: white; padding-left:10px;">Heart Disease Prediction System</p>
+	
+	<div id="wrapper">
+		<div id="header-wrapper">
+			<div id="header" class="container">
+				<div id="logo">
+					<h1 style="padding-left: 5px ;padding-top:2%"><a href="{{url_for('main_page')}}">Heart Disease Prediction System</a></h1>
+				</div>
+
+				<div  id="menu" style="font-size: 1.4em;">
+					<ul>
+						
+						<li ><a href="{{url_for('test_page')}}" accesskey="2" title="">Tests</a></li>
+						<li class="current_page_item"><a href="{{url_for('about_page')}}" accesskey="4" title="">About Us</a></li>
+					
+						
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div id="menu">
-			<ul>
-				<li><a href="{{url_for('main_page')}}" accesskey="1" title="">Homepage</a></li>
-				<li><a href="{{url_for('test_page')}}" accesskey="2" title="">Tests</a></li>
-				<li class="current_page_item"><a href="{{url_for('about_page')}}" accesskey="4" title="">About Us</a></li>
-				<li><a href="{{url_for('helpline_page')}}" accesskey="5" title="">Help-line</a></li>
-			</ul>
+		<div style="height: 27em; width: 100%; background-image: url('/static/img/heartgif.gif')">
+			<h1 align="center" style="color: #FFFFFF; font-size: 5em; padding-top:3em;">ABOUT US</h1>
 		</div>
-	</div>
-	</div>
-	<div style="height: 27em; width: 100%; background-image: url('/static/img/heartgif.gif')">
-		<h1 align="center" style="color: #FFFFFF; font-size: 5em; padding-top:3em;">ABOUT US</h1>
-	</div>
 	</div>
 	<div class="bg-image"></div>
-	<div class = "container">
-		<h1 style="color: #0000FF; font-size: 3em; padding-top: 2em;padding-left: 2em;">ABOUT THE PROJECT</h1>
-		<h2 style="padding-left:5em;padding-top:1em;color:#FFFFFF">Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease; heart rhythm problems (arrhythmias); and heart defects you're born with (congenital heart defects), among others. The term heart disease is often used interchangeably with the term cardiovascular disease. Cardiovascular disease generally refers to conditions that involve narrowed or blocked blood vessels that can lead to a heart attack, chest pain (angina) or stroke.</h2>
+	<div class="container">
+		<h1 align="center" style="color: #0000FF; font-size: 3em; padding-top: 2em;padding-left: 2em;">ABOUT THE PROJECT
+		</h1>
+		<h2 align="center" style="padding-top:1em;color:#FFFFFF">Heart disease describes a range of conditions that
+			affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary
+			artery disease; heart rhythm problems (arrhythmias); and heart defects you're born with (congenital heart
+			defects), among others. The term heart disease is often used interchangeably with the term cardiovascular
+			disease. Cardiovascular disease generally refers to conditions that involve narrowed or blocked blood
+			vessels that can lead to a heart attack, chest pain (angina) or stroke.</h2>
 		<br>
-		<h2 style="padding-left:5em;padding-top:1em;color:#FFFFFF"><strong>This project can detect if you have any problem in your heart based on some information and test. Heart disease is easier to treat when detected early, so talk to your doctor about your concerns regarding your heart health.</strong> If you're concerned about developing heart disease, talk to your doctor about steps you can take to reduce your heart disease risk. This is especially important if you have a family history of heart disease.<h2>
-		<h1 style="color: #0000FF; font-size: 3em; padding-top: 2em;padding-left: 2em;">ABOUT ME</h1>
-		<h2 style="padding-left:5em;padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Sayantan Das, the developer of self-determination, studying Computer Engg at UEM, Kolkata. Besides have some knowledge in</h2>
-		<h2 style="padding-left:5em;color:#FFFFFF;float:left">full stack development and data science.Here is a glance of it.Check my other projects from my linkedin and github profile.</h2>
-		<span class="byline"></span>
-		<div id="three-column">
-		<div class="gallery" style="margin-right: 3%;float : right;">
-	 		<a target="_blank" href="{{url_for('static',filename='/img/SAYANTAN.jpg')}}">
-			<img src="{{url_for('static',filename='/img/SAYANTAN.jpg')}}" alt="Sayantan Das" width="600" height="400">
-			</a>
-	  	<div align="center" style="color:#FFFFFF"><b>Sayantan Das</div>
-		</div>
-		</div>
+		<h2 align="center" style="padding-top:1em;color:#FFFFFF"><strong>This project can detect if you have any
+				problem in your heart based on some information and test. Heart disease is easier to treat when detected
+				early, so talk to your doctor about your concerns regarding your heart health.</strong> If you're
+			concerned about developing heart disease, talk to your doctor about steps you can take to reduce your heart
+			disease risk. This is especially important if you have a family history of heart disease.<h2>
+				<h1 align="center" style="color: #0000FF; font-size: 3em; padding-top: 2em;">ABOUT US</h1>
+
+				<div id="three-column">
+					<div class="gallery" style="margin-right: 42%;float : right;">
+						<a target="_blank" href="https://www.linkedin.com/in/sayantan-das-b450bb187">
+							<img src="{{url_for('static',filename='/img/SAYANTAN.jpg')}}" alt="Sayantan Das" width="600"
+								height="400">
+						</a>
+						<div align="center" style="color:#FFFFFF"><b>Sayantan Das</div>
+					</div>
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Sayantan Das, the
+						developer of self-determination, studying Computer Engg at UEM, Kolkata. Besides have some
+						knowledge in full stack development and data science.Here is a glance of it.Check my other
+						projects from my linkedin and github profile.</h2>
+					<span class="byline"></span><br><br>
+
+				</div>
+				
+				<div id="three-column">
+					<div class="gallery" style="margin-right: 42%;float : right;">
+						<a target="_blank" href="https://in.linkedin.com/in/someronbakuli">
+							<img src="{{url_for('static',filename='/img/SOMERON_BAKULI.jpeg')}}" alt="Someron Bakuli"
+								width="600" height="400">
+						</a>
+						<div align="center" style="color:#FFFFFF"><b>Someron Bakuli</div>
+					</div>
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Someron Bakuli, the
+						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
+						some
+						knowledge in full stack development and data science.Here is a glance of it.Check my other
+						projects from my linkedin and github profile.</h2>
+					<span class="byline"></span><br><br>
+
+				</div>
+				
+				<div id="three-column">
+					<div class="gallery" style="margin-right: 42%;float : right;">
+						<a target="_blank" href="https://www.linkedin.com/in/subhrajyoti-saha-29b34a153">
+							<img src="{{url_for('static',filename='/img/Subhrajyoti_Saha.jpeg')}}"
+								alt="Subhrajyoti Saha" width="600" height="400">
+						</a>
+						<div align="center" style="color:#FFFFFF"><b>Subhrajyoti Saha</div>
+					</div>
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Subhrajyoti Saha, the
+						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
+						some
+						knowledge in UI/UX desinging and data science.Here is a glance of it.Check my other
+						projects from my linkedin profile.</h2>
+					<span class="byline"></span><br><br>
+
+				</div>
+				
+				<div id="three-column">
+					<div class="gallery" style="margin-right: 42%;float : right;">
+						<a target="_blank" href="https://www.linkedin.com/in/saptorshedas07 ">
+							<img src="{{url_for('static',filename='/img/Saptorshe_das.jpeg')}}" alt="Saptorshe Das"
+								width="600" height="400">
+						</a>
+						<div align="center" style="color:#FFFFFF"><b>Saptorshe Das</div>
+					</div>
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Saptorshe Das, the
+						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
+						some
+						knowledge in full stack development and data science.Here is a glance of it.Check my other
+						projects from my linkedin and github profile.</h2>
+					<span class="byline"></span><br><br>
+
+				</div>
+				
+				<div id="three-column">
+					<div class="gallery" style="margin-right: 42%;float : right;">
+						<a target="_blank" href="https://www.linkedin.com/in/koyel-das-841a01191">
+							<img src="{{url_for('static',filename='/img/Koyel_Das.jpeg')}}" alt="Koyel Das" width="600"
+								height="400">
+						</a>
+						<div align="center" style="color:#FFFFFF"><b>Koyel Das</div>
+					</div>
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Koyel Das, the
+						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
+						some
+						knowledge in data science.Here is a glance of it.Check my other
+						projects from my linkedin profile.</h2>
+					<span class="byline"></span><br><br>
+
+				</div>
+				
+				<div id="three-column">
+					<div class="gallery" style="margin-right: 42%;float : right;">
+						<a target="_blank" href="https://www.linkedin.com/in/amar-sarkar-23412618b">
+							<img src="{{url_for('static',filename='/img/Amar.jpg')}}" alt="Amar Sarkar" width="600"
+								height="400">
+						</a>
+						<div align="center" style="color:#FFFFFF"><b>Amar Sarkar</div>
+					</div>
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Amar Sarkar, the
+						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
+						some
+						knowledge in cyber security and data science.Here is a glance of it.Check my other
+						projects from my linkedinprofile.</h2>
+					<span class="byline"></span>
+
+				</div>
 	</div>
-<div class="container" align="center">
-	<p style="margin-bottom: 20px">&copy; All rights reserved by Self-Determination@2005 | Devoloped by Sayantan Das | 2019 </p>
-</div>
+	<div class="container" align="center">
+		<p style="margin-bottom: 20px">&copy; All rights reserved by Group-66@2020 | Devoloped by Group 66 under Arunabha Tarafdar | 2020 </p>
+	</div>
 </body>
+
 </html>
