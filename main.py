@@ -59,10 +59,10 @@ def test_page():
         infProb = clf.predict([inputFeatures])
         print(infProb)
         if infProb==[1]:
-            s = "You may have problem in heart"
+            s = "You may have problem in your heart! Please go through the links below!"
             return render_template('result.html',inf=s)
         elif infProb==[0]:
-            s = "You don't have any problem"
+            s = "Cogratulations! You don't have any heart problem...\nBut if you feal seek than check out the links below!"
             return render_template('result.html', inf=s)
     return render_template('SAT.html')
 @app.route('/about', methods=["GET","POST"])
