@@ -115,7 +115,7 @@
 			background-color: #45a049;
 		}
 
-		
+
 
 		.col-25 {
 			float: left;
@@ -153,7 +153,7 @@
 
 <body style=" background-color: #FFFF00">
 
-	
+
 	<audio loop autoplay>
 		<source src="{{ url_for('static', filename='audio.mp3') }}" type="audio/mp3">
 	</audio>
@@ -192,233 +192,270 @@
 	<div align="center">
 		<br><br>
 		<h1><strong><u>Please Enter The Details</u></strong></h1><br>
-<div class="container" style="padding-left: 2%;">
-		<form id="assessment-form" method="post" style="font-size: 1.5em">
-			<div class="row">
-				<div class="col-25">
-					<label>Enter Your Age:</label></div>
-		
-		
-		
-				<div class="col-75">
-					<input name="age" type="text" id="age" placeholder="Eg:19" style="margin-left: 2%;width:50%;font-size: 1.1em;"
-						required>
-					&nbsp<button class="popup" onclick="myFunction()">i
-						<span class="popuptext" id="myPopup" style="font-size: 1.5em;">Age is critical
-							Factor!</span></button>
-				</div>
-			</div>
-		
-		
-			<div class="row">
-				<br>
-				<div class="col-25">
-					<label for="sex">Gender:</label></div>
-		
-				<div class="col-75">
-					<select id="sex" name="sex" style="margin-left: 2%;width:50%;font-size: 1.1em" required>
-						<option value="1"> Male</option><br>
-						<option value="0"> Female</option><br>
-					</select>
-					&nbsp<button class="popup" onclick="myFunction1()">i
-						<span class="popuptext" id="myPopup1" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-		
-			<div class="row">
-				<br>
-				<div class="col-25">
-					<label for="cp">Chest Pain Type:</label></div>
-		
-				<div class="col-75">
-					<select id="cp" name="cp" style="margin-left: 2%;width:50%;font-size: 1.1em" required>
-						<option value="0"> Typical Angina<br>
-						<option value="1"> Atypical Angina<br>
-						<option value="2"> Non-Anginal Pain <br>
-						<option value="3"> Asymptomatic<br><br><br>
-					</select>
-					&nbsp<button class="popup" onclick="myFunction2()">i
-						<span class="popuptext" id="myPopup2" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-		
-		
-			<div class="row">
-				<div class="col-25">
-					<label for="trestbps">Resting Blood Pressure
-						(in mm Hg on admission to the hospital):
-					</label></div>
-		<br>
-				<div class="col-75">
-					<input type="number" name="trestbps" id="trestbps" style="margin-left: 2%;width:50%;font-size: 2em;"
-						required>&nbsp<button class="popup" onclick="myFunction3()">i
-						<span class="popuptext" id="myPopup3" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-		
-		
-			<div class="row">
-				<div class="col-25">
-					<label for="chol">Serum Cholestoral (in mg/dl):</label></div>
-		
-		
-		
-				<div class="col-75">
-					<input type="number" name="chol" id="chol" style="margin-left: 2%;width:50%;font-size: 2em;" required>&nbsp<button
-						class="popup" onclick="myFunction4()">i
-						<span class="popuptext" id="myPopup4" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-		
-		
-			<div class="row">
-				<div class="col-25">
-					<label for="fbs">Is Fasting Blood Sugar More than 120 mg/dl?</label></div>
-		
-		
-				<div class="col-75">
-					<select name="fbs" id="fbs" style="margin-left: 2%;width:50%;font-size: 1.1em;">
-						<option value="1"> Yes</option>
-						<option value="0"> No</option>
-					</select>&nbsp<button class="popup" onclick="myFunction5()">i
-						<span class="popuptext" id="myPopup5" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-			<div class="row">
-				<div class="col-25">
-					<label for="restecg">Resting Electrocardiographic Results:</label></div>
-		
-		
-				<div class="col-75">
-					<select name="restecg" id="restecg" style="margin-left: 2%;width:50%;font-size: 1.1em;" required>
-						<option value="0"> Normal<br>
-						<option value="1"> Having ST-T Wave Abnormality</option><br>
-						<option value="2"> Showing Probable or Definite Left Ventricular Hypertrophy by Estes'
-							Criteria</option>
-					</select>&nbsp<button class="popup" onclick="myFunction6()">i
-						<span class="popuptext" id="myPopup6" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-		
-		
-			<div class="row">
-				<div class="col-25">
-					<label for="thalach">Maximum Heart Rate Achieved:</label></div>
-		
-		
-		
-				<div class="col-75">
-					<input type="number" id="thalach" name="thalach" style="margin-left: 2%;width:50%;font-size: 2em;"
-						required>&nbsp<button class="popup" onclick="myFunction7()">i
-						<span class="popuptext" id="myPopup7" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-		
-		
-			<div class="row">
-				<div class="col-25">
-					<label for="exang">Exercise Induced Angina:</label></div>
-		
-		
-				<div class="col-75">
-					<select name="exang" id="exang" style="margin-left: 2%;width:50%;font-size: 1.1em;" required>
-						<option value="1"> Yes</option>
-						<option value="0"> No</option>
-					</select>&nbsp<button class="popup" onclick="myFunction8()">i
-						<span class="popuptext" id="myPopup8" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-		
-		
-			<div class="row">
-				<div class="col-25">
-					<label for="oldpeak">ST Depression Induced by Exercise Relative to Rest:</label></div>
-		
-		
-		<br>
-				<div class="col-75">
-					<input name="oldpeak" id="oldpeak" type="text" style="margin-left: 2%;width:50%;font-size: 1.1em;"
-						required>&nbsp<button class="popup" onclick="myFunction9()">i
-						<span class="popuptext" id="myPopup9" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-		
-		
-			<div class="row">
-				<div class="col-25">
-					<label for="slope">The slope of the peak exercise ST segment:</label></div>
-		
-		
-				<div class="col-75">
-					<select name="slope" id="slope" style="margin-left: 2%;width:50%;font-size: 1.1em;" required>
-						<option value="0"> Upsloping</option>
-						<option value="1"> Flat</option>
-						<option value="2"> Downsloping </option>
-					</select>&nbsp<button class="popup" onclick="myFunction10()">i
-						<span class="popuptext" id="myPopup10" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-		
-		
-			<div class="row">
-				<div class="col-25">
-					<label for="ca">Number of Major Vessels (0-3) Colored by Flourosopy:</label></div>
-		
-		
-		<br>
-				<div class="col-75">
-					<input type="number" name="ca" id="ca" 
-						style="margin-left: 2%;width:50%;font-size: 2em;" required>&nbsp<button class="popup"
-						onclick="myFunction11()">i
-						<span class="popuptext" id="myPopup11" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-		
-		
-			<div class="row">
-				<div class="col-25">
-					<label for="thal">Thalassemia level:</label></div>
-		
-				<div class="col-75">
-					<select name="thal" id="thal" style="margin-left: 2%;width:50%;font-size: 1.1em;">
-						<option value="1"> Normal</option>
-						<option value="2"> Fixed Defect</option>
-						<option value="3"> Reversable Defect</option>
-					</select>&nbsp<button class="popup" onclick="myFunction12()">i
-						<span class="popuptext" id="myPopup12" style="font-size: 1.5em;">Gender is critical
-							Factor!</span></button></div>
-			</div>
-		
-		
-		
-		<br><br>
-			<button type="submit" style="margin-left: -10%;font-size: 2em; background-color: #0000FF; color: #FFFFFF" >Submit</button>
+		<div class="container" style="padding-left: 2%;">
+			<form id="assessment-form" method="post" style="font-size: 1.5em">
+				<div class="row">
+					<div class="col-25">
+						<label>Enter Your Age:</label></div>
 
-		
-		</form>
-	</div>
+
+
+					<div class="col-75">
+						<input name="age" type="text" id="age" placeholder="Eg:19"
+							style="margin-left: 2%;width:50%;font-size: 1.1em;" required>
+						&nbsp<button class="popup" onclick="myFunction()">i
+							<span class="popuptext" id="myPopup" style="font-size: 1.5em;">Age is critical
+								Factor!</span></button>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<br>
+					<div class="col-25">
+						<label for="sex">Gender:</label></div>
+
+					<div class="col-75">
+						<select id="sex" name="sex" style="margin-left: 2%;width:50%;font-size: 1.1em" required>
+							<option value="1"> Male</option><br>
+							<option value="0"> Female</option><br>
+						</select>
+						&nbsp<button class="popup" onclick="myFunction1()">i
+							<span class="popuptext" id="myPopup1" style="font-size: 1.5em;">Gender is critical
+								Factor!</span></button></div>
+				</div>
+
+
+
+				<div class="row">
+					<br>
+					<div class="col-25">
+						<label for="cp">Chest Pain Type:</label></div>
+
+					<div class="col-75">
+						<select id="cp" name="cp" style="margin-left: 2%;width:50%;font-size: 1.1em" required>
+							<option value="0"> Typical Angina<br>
+							<option value="1"> Atypical Angina<br>
+							<option value="2"> Non-Anginal Pain <br>
+							<option value="3"> Asymptomatic<br><br><br>
+						</select>
+						&nbsp<button class="popup" onclick="myFunction2()">i
+							<span class="popuptext" id="myPopup2" style="font-size: 1.5em;">
+								Chest pain appears in many forms, ranging from a sharp stab to a dull ache. Sometimes
+								chest pain feels crushing or burning. In certain cases, the pain travels up the neck,
+								into the jaw, and then radiates to the back or down one or both arms.
+								Many different problems can cause chest pain. The most life-threatening causes involve
+								the heart or lungs. Because chest pain can indicate a serious problem, it's important to
+								seek immediate medical help.</span></button></div>
+				</div>
+
+
+
+
+				<div class="row">
+					<div class="col-25">
+						<label for="trestbps">Resting Blood Pressure
+							(in mm Hg on admission to the hospital):
+						</label></div>
+					<br>
+					<div class="col-75">
+						<input type="number" name="trestbps" id="trestbps"
+							style="margin-left: 2%;width:50%;font-size: 2em;" required>&nbsp<button class="popup"
+							onclick="myFunction3()">i
+							<span class="popuptext" id="myPopup3" style="font-size: 1.5em;">Blood pressure is the
+								pressure of circulating blood against the walls of blood vessels. Most of this pressure
+								results from the heart pumping blood through the circulatory system. When used without
+								qualification, the term "blood pressure" refers to the pressure in the large
+								arteries.</span></button></div>
+				</div>
+
+
+
+
+				<div class="row">
+					<div class="col-25">
+						<label for="chol">Serum Cholestoral (in mg/dl):</label></div>
+
+
+
+					<div class="col-75">
+						<input type="number" name="chol" id="chol" style="margin-left: 2%;width:50%;font-size: 2em;"
+							required>&nbsp<button class="popup" onclick="myFunction4()">i
+							<span class="popuptext" id="myPopup4" style="font-size: 1.5em;">The total serum cholesterol
+								level is the amount of cholesterol in the blood. A high serum cholesterol level is a
+								concern, because it raises your risk of heart disease. When people talk about getting
+								their cholesterol checked or finding out their cholesterol levels, they are usually
+								referring to serum cholesterol levels.</span></button></div>
+				</div>
+
+
+
+
+				<div class="row">
+					<div class="col-25">
+						<label for="fbs">Is Fasting Blood Sugar More than 120 mg/dl?</label></div>
+
+
+					<div class="col-75">
+						<select name="fbs" id="fbs" style="margin-left: 2%;width:50%;font-size: 1.1em;">
+							<option value="1"> Yes</option>
+							<option value="0"> No</option>
+						</select>&nbsp<button class="popup" onclick="myFunction5()">i
+							<span class="popuptext" id="myPopup5" style="font-size: 1.5em;">Fasting Blood Sugar is
+								critical
+								Factor!</span></button></div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-25">
+						<label for="restecg">Resting Electrocardiographic Results:</label></div>
+
+
+					<div class="col-75">
+						<select name="restecg" id="restecg" style="margin-left: 2%;width:50%;font-size: 1.1em;"
+							required>
+							<option value="0"> Normal<br>
+							<option value="1"> Having ST-T Wave Abnormality</option><br>
+							<option value="2"> Showing Probable or Definite Left Ventricular Hypertrophy by Estes'
+								Criteria</option>
+						</select>&nbsp<button class="popup" onclick="myFunction6()">i
+							<span class="popuptext" id="myPopup6" style="font-size: 1.5em;">Electrocardiography, method
+								of graphic tracing (electrocardiogram; ECG or EKG) of the electric current generated by
+								the heart muscle during a heartbeat. The tracing is recorded with an electrocardiograph
+								(actually a relatively simple string galvanometer), and it provides information on the
+								condition and performance of the heart.</span></button></div>
+				</div>
+
+
+
+
+				<div class="row">
+					<div class="col-25">
+						<label for="thalach">Maximum Heart Rate Achieved:</label></div>
+
+
+
+					<div class="col-75">
+						<input type="number" id="thalach" name="thalach"
+							style="margin-left: 2%;width:50%;font-size: 2em;" required>&nbsp<button class="popup"
+							onclick="myFunction7()">i
+							<span class="popuptext" id="myPopup7" style="font-size: 1.5em;">A normal resting heart rate
+								for adults ranges from 60 to 100 beats per minute.
+								Generally, a lower heart rate at rest implies more efficient heart function and better
+								cardiovascular fitness. For example, a well-trained athlete might have a normal resting
+								heart rate closer to 40 beats per minute.
+								To measure your heart rate, simply check your pulse. Place your index and third fingers
+								on your neck to the side of your windpipe. To check your pulse at your wrist, place two
+								fingers between the bone and the tendon over your radial artery — which is located on
+								the thumb side of your wrist.
+								When you feel your pulse, count the number of beats in 15 seconds. Multiply this number
+								by four to calculate your beats per minute.</span></button></div>
+				</div>
+
+
+
+
+				<div class="row">
+					<div class="col-25">
+						<label for="exang">Exercise Induced Angina:</label></div>
+
+
+					<div class="col-75">
+						<select name="exang" id="exang" style="margin-left: 2%;width:50%;font-size: 1.1em;" required>
+							<option value="1"> Yes</option>
+							<option value="0"> No</option>
+						</select>&nbsp<button class="popup" onclick="myFunction8()">i
+							<span class="popuptext" id="myPopup8" style="font-size: 1.5em;">Stable angina is usually
+								triggered by physical activity. When you climb stairs, exercise or walk, your heart
+								demands more blood, but narrowed arteries slow down blood flow.</span></button></div>
+				</div>
+
+
+
+
+				<div class="row">
+					<div class="col-25">
+						<label for="oldpeak">ST Depression Induced by Exercise Relative to Rest:</label></div>
+
+
+					<br>
+					<div class="col-75">
+						<input name="oldpeak" id="oldpeak" type="text"
+							style="margin-left: 2%;width:50%;font-size: 1.1em;" required>&nbsp<button class="popup"
+							onclick="myFunction9()">i
+							<span class="popuptext" id="myPopup9" style="font-size: 1.5em;">In a cardiac stress test, an
+								ST depression of at least 1 mm after adenosine administration indicates a reversible
+								ischaemia, while an exercise stress test requires an ST depression of at least 2 mm to
+								significantly indicate reversible ischaemia.</span></button></div>
+				</div>
+
+
+
+
+				<div class="row">
+					<div class="col-25">
+						<label for="slope">The slope of the peak exercise ST segment:</label></div>
+
+
+					<div class="col-75">
+						<select name="slope" id="slope" style="margin-left: 2%;width:50%;font-size: 1.1em;" required>
+							<option value="0"> Upsloping</option>
+							<option value="1"> Flat</option>
+							<option value="2"> Downsloping </option>
+						</select>&nbsp<button class="popup" onclick="myFunction10()">i
+							<span class="popuptext" id="myPopup10" style="font-size: 1.5em;">The normal ST segment
+								during exercise therefore slopes sharply upwards. By convention, ST segment depression
+								is measured relative to the isoelectric baseline (between the T and P waves) at a point
+								60-80 ms after the J point.</span></button></div>
+				</div>
+
+
+
+
+				<div class="row">
+					<div class="col-25">
+						<label for="ca">Number of Major Vessels (0-3) Colored by Flourosopy:</label></div>
+
+
+					<br>
+					<div class="col-75">
+						<input type="number" name="ca" id="ca" style="margin-left: 2%;width:50%;font-size: 2em;"
+							required>&nbsp<button class="popup" onclick="myFunction11()">i
+							<span class="popuptext" id="myPopup11" style="font-size: 1.5em;">It is critical
+								Factor!</span></button></div>
+				</div>
+
+
+
+
+				<div class="row">
+					<div class="col-25">
+						<label for="thal">Thalassemia level:</label></div>
+
+					<div class="col-75">
+						<select name="thal" id="thal" style="margin-left: 2%;width:50%;font-size: 1.1em;">
+							<option value="1"> Normal</option>
+							<option value="2"> Fixed Defect</option>
+							<option value="3"> Reversable Defect</option>
+						</select>&nbsp<button class="popup" onclick="myFunction12()">i
+							<span class="popuptext" id="myPopup12" style="font-size: 1.5em;">Thalassemia
+								(thal-uh-SEE-me-uh) is an inherited blood disorder that causes your body to have less
+								hemoglobin than normal. Hemoglobin enables red blood cells to carry oxygen. Thalassemia
+								can cause anemia, leaving you fatigued. If you have mild thalassemia, you might not need
+								treatment. But more severe forms might require regular blood
+								transfusions.</span></button></div>
+				</div>
+
+
+
+				<br><br>
+				<button type="submit"
+					style="margin-left: -10%;font-size: 2em; background-color: #0000FF; color: #FFFFFF">Submit</button>
+
+
+			</form>
+		</div>
 
 	</div>
 	</div>
