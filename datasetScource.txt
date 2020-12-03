@@ -1,1 +1,9 @@
 https://www.kaggle.com/johnsmith88/heart-disease-dataset
+
+reference
+https://link.springer.com/article/10.1007/s42979-020-00365-y
+https://www.researchgate.net/publication/326733163_Prediction_of_Heart_Disease_Using_Machine_Learning_Algorithms
+https://en.wikipedia.org/wiki/Decision_tree
+https://en.wikipedia.org/wiki/Logistic_regression
+https://en.wikipedia.org/wiki/Support_vector_machine
+https://lucdemortier.github.io/projects/3_mcnulty
