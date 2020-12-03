@@ -11,14 +11,16 @@
 	<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/default2.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+	<link rel="icon" href="{{url_for('static',filename='/img/UEM_Logo.jpg')}}" type="image/icon type">
+
 
 </head>
 
 <body style=" background-color: #FF8500">
 	
-	<audio loop autoplay>
+	<!-- <audio loop autoplay>
 		<source src="{{ url_for('static', filename='audio.mp3') }}" type="audio/mp3">
-	</audio>
+	</audio> -->
 	
 	<div id="wrapper">
 		<div id="header-wrapper">
@@ -42,7 +44,7 @@
 			<h1 align="center" style="color: #FFFFFF; font-size: 5em; padding-top:3em;">ABOUT US</h1>
 		</div>
 	</div>
-	<div class="bg-image"></div>
+
 	<div class="container">
 		<h1 align="center" style="color: #0000FF; font-size: 3em; padding-top: 2em;padding-left: 2em;">ABOUT THE PROJECT
 		</h1>
@@ -68,7 +70,7 @@
 						</a>
 						<div align="center" style="color:#FFFFFF"><b>Sayantan Das</div>
 					</div>
-					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Sayantan Das, the
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left">(12017009001437,CSE-4D-34)<br> Hey, I am Sayantan Das, the
 						developer of self-determination, studying Computer Engg at UEM, Kolkata. Besides have some
 						knowledge in full stack development and data science.Here is a glance of it.Check my other
 						projects from my linkedin and github profile.</h2>
@@ -84,7 +86,7 @@
 						</a>
 						<div align="center" style="color:#FFFFFF"><b>Someron Bakuli</div>
 					</div>
-					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Someron Bakuli, the
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left">(12017009001412,CSE-4C-25)<br> Hey, I am Someron Bakuli, the
 						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
 						some
 						knowledge in full stack development and data science.Here is a glance of it.Check my other
@@ -92,58 +94,6 @@
 					<span class="byline"></span><br><br>
 
 				</div>
-				
-				<div id="three-column">
-					<div class="gallery" style="margin-right: 42%;float : right;">
-						<a target="_blank" href="https://www.linkedin.com/in/subhrajyoti-saha-29b34a153">
-							<img src="{{url_for('static',filename='/img/Subhrajyoti_Saha.jpeg')}}"
-								alt="Subhrajyoti Saha" width="600" height="400">
-						</a>
-						<div align="center" style="color:#FFFFFF"><b>Subhrajyoti Saha</div>
-					</div>
-					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Subhrajyoti Saha, the
-						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
-						some
-						knowledge in UI/UX desinging and data science.Here is a glance of it.Check my other
-						projects from my linkedin profile.</h2>
-					<span class="byline"></span><br><br>
-
-				</div>
-				
-				<div id="three-column">
-					<div class="gallery" style="margin-right: 42%;float : right;">
-						<a target="_blank" href="https://www.linkedin.com/in/saptorshedas07 ">
-							<img src="{{url_for('static',filename='/img/Saptorshe_das.jpeg')}}" alt="Saptorshe Das"
-								width="600" height="400">
-						</a>
-						<div align="center" style="color:#FFFFFF"><b>Saptorshe Das</div>
-					</div>
-					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Saptorshe Das, the
-						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
-						some
-						knowledge in full stack development and data science.Here is a glance of it.Check my other
-						projects from my linkedin and github profile.</h2>
-					<span class="byline"></span><br><br>
-
-				</div>
-				
-				<div id="three-column">
-					<div class="gallery" style="margin-right: 42%;float : right;">
-						<a target="_blank" href="https://www.linkedin.com/in/koyel-das-841a01191">
-							<img src="{{url_for('static',filename='/img/Koyel_Das.jpeg')}}" alt="Koyel Das" width="600"
-								height="400">
-						</a>
-						<div align="center" style="color:#FFFFFF"><b>Koyel Das</div>
-					</div>
-					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Koyel Das, the
-						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
-						some
-						knowledge in data science.Here is a glance of it.Check my other
-						projects from my linkedin profile.</h2>
-					<span class="byline"></span><br><br>
-
-				</div>
-				
 				<div id="three-column">
 					<div class="gallery" style="margin-right: 42%;float : right;">
 						<a target="_blank" href="https://www.linkedin.com/in/amar-sarkar-23412618b">
@@ -152,7 +102,7 @@
 						</a>
 						<div align="center" style="color:#FFFFFF"><b>Amar Sarkar</div>
 					</div>
-					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left"> Hey, I am Amar Sarkar, the
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left">(12017009001481,CSE-4C-71)<br> Hey, I am Amar Sarkar, the
 						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
 						some
 						knowledge in cyber security and data science.Here is a glance of it.Check my other
@@ -160,6 +110,60 @@
 					<span class="byline"></span>
 
 				</div>
+				<div id="three-column">
+					<div class="gallery" style="margin-right: 42%;float : right;">
+						<a target="_blank" href="https://www.linkedin.com/in/saptorshedas07 ">
+							<img src="{{url_for('static',filename='/img/Saptorshe_das.jpeg')}}" alt="Saptorshe Das"
+								width="600" height="400">
+						</a>
+						<div align="center" style="color:#FFFFFF"><b>Saptorshe Das</div>
+					</div>
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left">(12017009001056,CSE-4C-72)<br> Hey, I am Saptorshe Das, the
+						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
+						some
+						knowledge in full stack development and data science.Here is a glance of it.Check my other
+						projects from my linkedin and github profile.</h2>
+					<span class="byline"></span><br><br>
+
+				</div>
+				<div id="three-column">
+					<div class="gallery" style="margin-right: 42%;float : right;">
+						<a target="_blank" href="https://www.linkedin.com/in/koyel-das-841a01191">
+							<img src="{{url_for('static',filename='/img/Koyel_Das.jpeg')}}" alt="Koyel Das" width="600"
+								height="400">
+						</a>
+						<div align="center" style="color:#FFFFFF"><b>Koyel Das</div>
+					</div>
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left">(12017009001560,CSE-4C-81)<br> Hey, I am Koyel Das, the
+						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
+						some
+						knowledge in data science.Here is a glance of it.Check my other
+						projects from my linkedin profile.</h2>
+					<span class="byline"></span><br><br>
+
+				</div>
+				<div id="three-column">
+					<div class="gallery" style="margin-right: 42%;float : right;">
+						<a target="_blank" href="https://www.linkedin.com/in/subhrajyoti-saha-29b34a153">
+							<img src="{{url_for('static',filename='/img/Subhrajyoti_Saha.jpeg')}}"
+								alt="Subhrajyoti Saha" width="600" height="400">
+						</a>
+						<div align="center" style="color:#FFFFFF"><b>Subhrajyoti Saha</div>
+					</div>
+					<h2 align="center" style="padding-top:1em;color:#FFFFFF;float:left">(12017009001443,CSE-4C-86)<br> Hey, I am Subhrajyoti Saha, the
+						developer of self-determination, studying Computer Science & Engg at UEM, Kolkata. Besides have
+						some
+						knowledge in UI/UX desinging and data science.Here is a glance of it.Check my other
+						projects from my linkedin profile.</h2>
+					<span class="byline"></span><br><br>
+
+				</div>
+				
+				
+				
+				
+				
+				
 	</div>
 	<div class="container" align="center">
 		<p style="margin-bottom: 20px">&copy; All rights reserved by Group-66@2020 | Devoloped by Group 66 under Arunabha Tarafdar | 2020 </p>

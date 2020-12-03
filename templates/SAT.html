@@ -11,8 +11,8 @@
 	<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/default2.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+	<link rel="icon" href="{{url_for('static',filename='/img/UEM_Logo.jpg')}}" type="image/icon type">
 
-	<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
 	<style>
 		/* Popup container - can be anything you want */
@@ -194,7 +194,7 @@
 		<h1><strong><u>Please Enter The Details</u></strong></h1><br>
 		<div class="container" style="padding-left: 2%;">
 			<form id="assessment-form" method="post" style="font-size: 1.5em">
-				<div class="row">
+				<div class="row" style="padding-top: 3%;">
 					<div class="col-25">
 						<label>Enter Your Age:</label></div>
 
@@ -210,7 +210,7 @@
 				</div>
 
 
-				<div class="row">
+				<div class="row" style="padding-top: 1%;">
 					<br>
 					<div class="col-25">
 						<label for="sex">Gender:</label></div>
@@ -225,9 +225,22 @@
 								Factor!</span></button></div>
 				</div>
 
-
-
 				<div class="row">
+					<div class="col-25">
+						<label for="fbs">Is Fasting Blood Sugar More than 120 mg/dl?</label></div>
+
+
+					<div class="col-75">
+						<select name="fbs" id="fbs" style="margin-left: 2%;width:50%;font-size: 1.1em;">
+							<option value="1"> Yes</option>
+							<option value="0"> No</option>
+						</select>&nbsp<button class="popup" onclick="myFunction5()">i
+							<span class="popuptext" id="myPopup5" style="font-size: 1.5em;">Fasting Blood Sugar is
+								critical
+								Factor!</span></button></div>
+				</div>
+
+				<div class="row" style="padding-top: 1%;">
 					<br>
 					<div class="col-25">
 						<label for="cp">Chest Pain Type:</label></div>
@@ -291,20 +304,7 @@
 
 
 
-				<div class="row">
-					<div class="col-25">
-						<label for="fbs">Is Fasting Blood Sugar More than 120 mg/dl?</label></div>
-
-
-					<div class="col-75">
-						<select name="fbs" id="fbs" style="margin-left: 2%;width:50%;font-size: 1.1em;">
-							<option value="1"> Yes</option>
-							<option value="0"> No</option>
-						</select>&nbsp<button class="popup" onclick="myFunction5()">i
-							<span class="popuptext" id="myPopup5" style="font-size: 1.5em;">Fasting Blood Sugar is
-								critical
-								Factor!</span></button></div>
-				</div>
+			
 
 
 				<div class="row">
