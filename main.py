@@ -68,9 +68,6 @@ def test_page():
 @app.route('/about', methods=["GET","POST"])
 def about_page():
     return render_template('about.html')
-@app.route('/helpline', methods=["GET","POST"])
-def helpline_page():
-    return render_template('helpline.html')
 
 
 if __name__ == "__main__":
