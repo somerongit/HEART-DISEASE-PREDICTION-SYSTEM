@@ -201,8 +201,8 @@
 
 
 					<div class="col-75">
-						<input name="age" type="text" id="age" placeholder="Eg:19"
-							style="margin-left: 2%;width:50%;font-size: 1.1em;" required>
+						<input name="age" type="number" id="age" placeholder="19"
+							style="margin-left: 2%;width:50%;font-size: 2em;" required>
 						&nbsp<button class="popup" onclick="myFunction()">i
 							<span class="popuptext" id="myPopup" style="font-size: 1.5em;">Age is critical
 								Factor!</span></button>
@@ -377,11 +377,13 @@
 				<div class="row">
 					<div class="col-25">
 						<label for="oldpeak">ST Depression Induced by Exercise Relative to Rest:</label></div>
-
+						
 
 					<br>
 					<div class="col-75">
-						<input name="oldpeak" id="oldpeak" type="text"
+						<input name="oldpeak" id="oldpeak" type="number" placeholder="0.00" min="0" value="0" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" onblur="
+						this.parentNode.parentNode.style.backgroundColor=/^\d+(?:\.\d{1,2})?$/.test(this.value)?'inherit':'red'
+						"
 							style="margin-left: 2%;width:50%;font-size: 1.1em;" required>&nbsp<button class="popup"
 							onclick="myFunction9()">i
 							<span class="popuptext" id="myPopup9" style="font-size: 1.5em;">In a cardiac stress test, an
