@@ -13,9 +13,9 @@ It's a complete website which predicts if heart disease can occur or not based o
 
 ## --> Install set-up
     open 'cmd' on colne folder and run
- #  pip install -r [requirement.txt](https://github.com/somerongit/HEART-DISEASE-PREDICTION-SYSTEM/blob/main/requirement.txt) 
+ ##  pip install -r [requirement.txt](https://github.com/somerongit/HEART-DISEASE-PREDICTION-SYSTEM/blob/main/requirement.txt) 
     
 ## ---> Run the project
     open 'cmd' on colne folder and run comment 
-#   python [main.py](https://github.com/somerongit/HEART-DISEASE-PREDICTION-SYSTEM/blob/main/main.py)
+##   python [main.py](https://github.com/somerongit/HEART-DISEASE-PREDICTION-SYSTEM/blob/main/main.py)
      
