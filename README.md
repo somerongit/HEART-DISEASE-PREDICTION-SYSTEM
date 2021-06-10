@@ -2,7 +2,7 @@
 It's a complete website which predicts if heart disease can occur or not based on some data. Please enable the virtual environment while using it.
 
 
-# [Live Demo](https://sam509.pythonanywhere.com/)
+# [Demo](https://sam509.pythonanywhere.com/)
 
 # Instrauction for installation
 ## --> Install python 3.8 or later version
