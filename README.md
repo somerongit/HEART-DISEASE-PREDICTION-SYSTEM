@@ -9,7 +9,7 @@ It's a complete website which predicts if heart disease can occur or not based o
     click to download --> https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe
     
 ## --> Install VS code
-    [click to download](https://code.visualstudio.com/docs/?dv=win)
+   [Click to download](https://code.visualstudio.com/docs/?dv=win)
 
 ## --> Install set-up
     open 'cmd' on colne folder and run 'pip install -r requirement.txt'
