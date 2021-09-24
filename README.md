@@ -1,6 +1,7 @@
 # [Heart Disease Prediction](https://sam509.pythonanywhere.com/)
 It's a complete website which predicts if heart disease can occur or not based on some data. Please enable the virtual environment while using it.
 
+<img src="https://raw.githubusercontent.com/somerongit/somerongit/main/img/project/heart.png">
 
 # [Demo](https://sam509.pythonanywhere.com/) 
 ##### (Link Expired in 15th Dec)
