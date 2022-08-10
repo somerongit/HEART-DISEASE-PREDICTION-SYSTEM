@@ -14,10 +14,10 @@ It's a complete website which predicts if heart disease can occur or not based o
    [Click to download](https://code.visualstudio.com/docs/?dv=win)
 
 ## --> Install set-up
-    open 'cmd' on colne folder and run
+    open 'cmd' on clone folder and run
  ##  pip install -r [requirement.txt](https://github.com/somerongit/HEART-DISEASE-PREDICTION-SYSTEM/blob/main/requirement.txt) 
     
 ## ---> Run the project
-    open 'cmd' on colne folder and run comment 
+    open 'cmd' on clone folder and run comment 
 ##   python [main.py](https://github.com/somerongit/HEART-DISEASE-PREDICTION-SYSTEM/blob/main/main.py)
      
