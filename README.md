@@ -3,8 +3,6 @@ It's a complete website which predicts if heart disease can occur or not based o
 
 <img src="https://raw.githubusercontent.com/somerongit/somerongit/main/img/project/heart.png">
 
-# [Demo](https://sam509.pythonanywhere.com/) 
-##### (Link Expired in 15th Dec)
 
 # Instrauction for installation
 ## --> Install python 3.8 or later version
